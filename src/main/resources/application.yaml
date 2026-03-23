@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Elchino
+  data:
+    mongodb:
+      database: elchino
+      uri: mongodb://user:secret123@ac-pglbjri-shard-00-00.ygyqtee.mongodb.net:27017,ac-pglbjri-shard-00-01.ygyqtee.mongodb.net:27017,ac-pglbjri-shard-00-02.ygyqtee.mongodb.net:27017/?ssl=true&replicaSet=atlas-uxyg6s-shard-0&authSource=admin&appName=Cluster0
+
+server:
+  port: 8087
