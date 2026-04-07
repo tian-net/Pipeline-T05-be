@@ -1,0 +1,6 @@
+# kubectl create namespace freddy-quispe-12-namespace (COMANDO)
+# kubectl apply -f freddy-quispe-12-namespace.yml (yml)
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: freddy-quispe-12-namespace
