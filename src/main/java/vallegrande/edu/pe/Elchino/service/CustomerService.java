@@ -37,7 +37,6 @@ public class CustomerService {
     public Mono<Customer> create(Customer customer) {
         customer.setId(null); // Asegura que se genere un nuevo ID en MongoDB
         customer.setCreatedAt(LocalDateTime.now());
-        customer.setUpdatedAt(LocalDateTime.now());
         if (customer.getRegDate() == null) customer.setRegDate(LocalDate.now());
         if (customer.getIsDeleted() == null) customer.setIsDeleted(false);
         if (customer.getIsFrequent() == null) customer.setIsFrequent(false);
