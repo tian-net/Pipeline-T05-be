@@ -6,7 +6,7 @@ spring:
       #database: ${DATABASE_NAME}
       #uri: ${DATABASE_URI}
       database: elchino
-      uri: mongodb://user:secret123@ac-pglbjri-shard-00-00.ygyqtee.mongodb.net:27017,ac-pglbjri-shard-00-01.ygyqtee.mongodb.net:27017,ac-pglbjri-shard-00-02.ygyqtee.mongodb.net:27017/?ssl=true&replicaSet=atlas-uxyg6s-shard-0&authSource=admin&appName=Cluster0
+      uri: mongodb://luislevanovega_db_user:xPTQD0pzoRszfQK8@ac-huvxusl-shard-00-00.7ywmllo.mongodb.net:27017,ac-huvxusl-shard-00-01.7ywmllo.mongodb.net:27017,ac-huvxusl-shard-00-02.7ywmllo.mongodb.net:27017/?ssl=true&replicaSet=atlas-1488ye-shard-0&authSource=admin&appName=Pruebas
 
 server:
   port: 8087
