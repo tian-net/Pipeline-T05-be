@@ -102,13 +102,5 @@ public class RestaurantTableService {
         if (table.getCapacity() == null || table.getCapacity() < 1 || table.getCapacity() > 6) {
             throw new IllegalArgumentException("La capacidad debe estar entre 1 y 6");
         }
-        if (!isValidJson(table.getLocation())) {
-            throw new IllegalArgumentException("La ubicación debe ser un JSON válido");
-        }
-    }
-
-    private boolean isValidJson(String json) {
-        String trimmed = json.trim();
-        return trimmed.startsWith("{") && trimmed.endsWith("}");
     }
 }
