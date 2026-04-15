@@ -7,19 +7,24 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Document(collection = "reservation_tables")
+@Document(collection = "restaurant_tables")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ReservationTable {
+public class RestaurantTable {
     @Id
     private String id;
-    private String reservationId;
-    private String tableId;
-    private String notes;
+    private Integer tableNum;
+    private Integer capacity;
+    private String location;
+    private String description;
+    private String status;
+    private Boolean isReservable;
+    private LocalDate lastInspDate;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
