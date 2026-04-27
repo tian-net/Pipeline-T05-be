@@ -49,4 +49,11 @@ public class ReservationController {
     public Mono<Reservation> restore(@PathVariable String id) {
         return service.restore(id);
     }
+    
+    //  Obtener una reserva específica (Cabecera + Detalle)
+    @GetMapping("/{id}")
+    @Operation(summary = "Obtener reserva por ID con su detalle")
+    public Mono<Reservation> getById(@PathVariable String id) {
+        return service.findById(id);
+    }
 }
