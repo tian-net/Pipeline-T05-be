@@ -35,11 +35,11 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: ./dockerfile-freddy/Dockerfile
+          file: ./dockerfile-freddy/Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME_FREDDY }}/sebastian-webflux-nosql:latest
             ${{ secrets.DOCKERHUB_USERNAME_FREDDY }}/sebastian-webflux-nosql:${{ github.sha }}
 
     # Ejecutar Pipeline
-    # docker build -t sebastian/webflux-nosql:latest -f dockerfile-freddy/Dockerfile .
+    # docker build -t tian11qb/sebastian-webflux-nosql:latest -f dockerfile-freddy/Dockerfile .
