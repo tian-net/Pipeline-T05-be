@@ -27,16 +27,19 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME_FREDDY }}
+          password: ${{ secrets.DOCKERHUB_TOKEN_FREDDY }}
 
       # 3. Build y Push con tags latest y SHA
       - name: Build and Push Docker Image to Docker Hub
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: Dockerfile
+          dockerfile: ./dockerfile-freddy/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME_FREDDY }}/sebastian-webflux-nosql:latest
+            ${{ secrets.DOCKERHUB_USERNAME_FREDDY }}/sebastian-webflux-nosql:${{ github.sha }}
+
+    # Ejecutar Pipeline
+    # docker build -t sebastian/webflux-nosql:latest -f dockerfile-freddy/Dockerfile .
